@@ -69,11 +69,11 @@
         <form action="{{ url_for('index') }}" method="post">
           <div class="four_input_grid">
             <label for="input1">No. data points:</label>
-            <input type="text" name="input1" placeholder="Input 1">
+            <input type="number" name="input1" placeholder="Input 1">
             <label for="input2">Start year:</label>
-            <input type="text" name="input2" placeholder="Input 2">
+            <input type="number" name="input2" placeholder="Input 2">
             <label for="input3">End year:</label>
-            <input type="text" name="input3" placeholder="Input 3">
+            <input type="number" name="input3" placeholder="Input 3">
             <label for="input4">Clusters/Markers:</label>
             <!--<input type="text" id="input4" placeholder="Input 4">-->
             <input type="hidden" id="input4" name="input4" value="marking">
@@ -241,7 +241,49 @@
 
 
 
-
+<h3 class="blank-seperator fade-in">
+  <div class="wrap">
+    <br>
+    Customer Profiles
+  <br>
+  <br>
+  </div>
+</h3>
+  
+<div class="container mt-4 profile-container">
+  <div class="row">
+    {% for profile in profiles %}
+    <div class="col-md-4 mb-4">
+      <div class="card profile-card">
+        <div class="card-body">
+          <h5 class="card-title">Profile: {{ profile['ProfileLocation'] }}
+            {% if profile['ProfileGender'] == "male" %}
+                Men
+            {% elif profile['ProfileGender'] == "female" %}
+                Women
+            {% elif profile['ProfileGender'] == "non-binary" %}
+                Non-Binary People
+            {% endif %}
+          </h5>
+          <p>Gender: {{ profile['ProfileGender'] }}</p>
+          <p>Location: {{ profile['ProfileLocation'] }}</p>
+          <p>Average Sentiment: {{ profile['ProfileAvgSentiment'] }}</p>
+          <h6>Average Company Sentiment Breakdown:</h6>
+          {% for company in profile['Companies'] %}
+            <p>{{ company['CompanyName'] | capitalize }} Sentiment: {{ company['CompanyAvgSentiment'] }}</p>
+          {% endfor %}
+          <h6>Common Interests:</h6>
+          <ul>
+            {% for interest in profile['Interests'] %}
+              <li>{{interest}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 
 
     <h3 class="blank-seperator fade-in">
