@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 import json
 import FinalMapping
 from collections import defaultdict
+import os
+import random
 app = Flask(__name__)
 
 #templates stuff
@@ -33,7 +35,13 @@ mysql = MySQL(app)
 
 @app.route('/home', methods =['GET', 'POST'])
 def index():
-
+    numProfiles = 9
+    profiles = load_profiles()
+    print(profiles)
+    if len(profiles) > numProfiles:
+        selected_profiles = random.sample(profiles, numProfiles)
+    else:
+        selected_profiles = profiles 
     if request.method == 'POST':
         input1 = request.form['input1']
         input2 = request.form['input2']
@@ -52,7 +60,7 @@ def index():
 
         FinalMapping.main(data_points=input1, date_1=input2, date_2=input3, clusters=input4)
 
-    return render_template('index.html')
+    return render_template('index.html', profiles=selected_profiles)
 
 @app.route('/', methods =['GET', 'POST'])
 def login():
@@ -199,6 +207,14 @@ def calc_plots(data_points):
 
     return x1, y1
 
-
+def load_profiles():
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    filepath = os.path.join(dir_path, 'output_profiles.json')
+    try:
+        with open(filepath, 'r') as file:
+            return json.load(file)
+    except Exception as e:
+        print(f"Error loading profiles: {e}")
+        return []
 if __name__ == '__main__':
     app.run(debug=True)

@@ -361,3 +361,41 @@ width: 100%;
 height: auto;
 }
 
+/* Customer Profiles Section */
+.profile-container {
+  padding: 1rem;
+  background-color: #3b4045; 
+  color: #f3f3f3; 
+}
+
+.profile-row {
+  margin-top: 1rem; 
+}
+
+.profile-card {
+  background: #2d3238; 
+  color: #f3f3f3; 
+  border: none; 
+}
+
+.profile-card .card-body {
+  padding: 1rem;
+}
+
+.profile-card h5.card-title {
+  font-size: 1.25rem;
+}
+
+.profile-card p.card-text {
+  font-size: 1rem; 
+}
+
+.profile-card:hover {
+  background: #343a40; 
+}
+
+@media (max-width: 991px) {
+  .profile-card {
+    margin-bottom: 1rem; 
+  }
+}
