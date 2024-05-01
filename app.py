@@ -1,19 +1,19 @@
-from flask import Flask, render_template, request, redirect, url_for, session
-from flask_mysqldb import MySQL
-import MySQLdb.cursors
-import re
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 import matplotlib.pyplot as plt
 import json
 import FinalMapping
 from collections import defaultdict
-import os
 import random
-app = Flask(__name__)
+from flask_sqlalchemy import SQLAlchemy
+import os
 
-#templates stuff
-#@app.route('/')
-#def index():
-#    return render_template('index.html')
+app = Flask(__name__)
+app.secret_key = 'b_5#y2L"F4Q8z\n\xec]/'
+database_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'instance', 'LoginDB.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + database_path.replace('\\', '/')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
 
 @app.route('/map2')
 def heatmapInteract():
@@ -24,20 +24,18 @@ def heatmapInteract():
     return render_template('map2.html', data_points=data_points, date_1=date_1, date_2=date_2, clusters=clusters)
 
 
-#database stuff (mysql) from geeks-to-geeks:   https://www.geeksforgeeks.org/login-and-registration-project-using-flask-and-mysql/
-#1
-app.secret_key = 'b_5#y2L"F4Q8z\n\xec]/'
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'wBbazXHBCTr0@x^7LSwrn8#0'
-app.config['MYSQL_DB'] = 'projectlogin'
-mysql = MySQL(app)
+class Account(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(50), unique=True, nullable=False)
+    password = db.Column(db.String(80), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+
+
 
 @app.route('/home', methods =['GET', 'POST'])
 def index():
     numProfiles = 9
     profiles = load_profiles()
-    print(profiles)
     if len(profiles) > numProfiles:
         selected_profiles = random.sample(profiles, numProfiles)
     else:
@@ -62,25 +60,27 @@ def index():
 
     return render_template('index.html', profiles=selected_profiles)
 
-@app.route('/', methods =['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
+def startup():
+    return redirect(url_for('login'))
+
+
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     msg = ''
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+    if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM accounts WHERE username = % s AND password = % s', (username, password, ))
-        account = cursor.fetchone()
+        account = Account.query.filter_by(username=username, password=password).first()
         if account:
             session['loggedin'] = True
-            session['id'] = account['id']
-            session['username'] = account['username']
-            msg = 'Logged in successfully !'
-            return render_template('index.html', msg = msg)
+            session['id'] = account.id
+            session['username'] = account.username
+            return redirect(url_for('index'))
         else:
-            msg = 'Incorrect username / password !'
-    return render_template('login.html', msg = msg)
- 
+            msg = 'Incorrect username/password!'
+    return render_template('login.html', msg=msg)
+
 @app.route('/logout')
 def logout():
     try:
@@ -88,39 +88,36 @@ def logout():
         session.pop('loggedin', None)
         session.pop('id', None)
         session.pop('username', None)
+        flash('You have been logged out.', 'info')  # Using 'info' as the category for informational messages
         # Redirect to the login page
-        return redirect(url_for('login'))
     except Exception as e:
         # Log the exception or handle it in an appropriate way
         print("An error occurred during logout:", e)
+        flash('An error occurred during logout. Please try again later.', 'error')  # Using 'error' as the category for error messages
         # Redirect to an error page or display a message to the user
-        return "An error occurred during logout. Please try again later."
+    return redirect(url_for('login'))  # Redirect to a safe page like the index or home page
+
+
  
-@app.route('/register', methods =['GET', 'POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def register():
     msg = ''
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form :
+    if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
         email = request.form['email']
-        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM accounts WHERE username = % s', (username, ))
-        account = cursor.fetchone()
-        if account:
-            msg = 'Account already exists !'
-        elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
-            msg = 'Invalid email address !'
-        elif not re.match(r'[A-Za-z0-9]+', username):
-            msg = 'Username must contain only characters and numbers !'
+        existing_user = Account.query.filter_by(username=username).first()
+        if existing_user:
+            msg = 'Account already exists!'
         elif not username or not password or not email:
-            msg = 'Please fill out the form !'
+            msg = 'Please fill out the form!'
         else:
-            cursor.execute('INSERT INTO accounts (username, password, email) VALUES (% s, % s, % s)', (username, password, email))
-            mysql.connection.commit()
-            msg = 'You have successfully registered !'
-    elif request.method == 'POST':
-        msg = 'Please fill out the form !'
-    return render_template('register.html', msg = msg)
+            new_user = Account(username=username, password=password, email=email)
+            db.session.add(new_user)
+            db.session.commit()
+            msg = 'You have successfully registered!'
+    return render_template('register.html', msg=msg)
+
 
 
 #taking input from text file
@@ -216,5 +213,8 @@ def load_profiles():
     except Exception as e:
         print(f"Error loading profiles: {e}")
         return []
+    
 if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
