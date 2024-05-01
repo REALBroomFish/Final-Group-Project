@@ -282,7 +282,7 @@ def legend(m):
     legend_html = '<div style="position: fixed; bottom: 50px; left: 10px; z-index:9999;">'
 
     # Read the content of the HTML file containing the legend
-    with open('legend.html', 'r') as f:
+    with open('templates/legend.html', 'r') as f:
         legend_content = f.read()
     
     # Append the content of the legend HTML to the legend_html variable
