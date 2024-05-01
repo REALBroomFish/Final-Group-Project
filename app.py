@@ -31,8 +31,23 @@ app.config['MYSQL_PASSWORD'] = 'wBbazXHBCTr0@x^7LSwrn8#0'
 app.config['MYSQL_DB'] = 'projectlogin'
 mysql = MySQL(app)
 
-@app.route('/home')
+@app.route('/home', methods =['GET', 'POST'])
 def index():
+
+    if request.method == 'POST':
+        input1 = request.form['input1']
+        input2 = request.form['input2']
+        input3 = request.form['input3']
+        toggle = request.form.get('toggle')
+        input4 = 'm' if toggle == 'on' else 'c'
+
+        print(f" input1:  {input1}")
+        print(f" input2:  {input2}")
+        print(f" input3:  {input3}")
+        print(f" input4:  {input4}")
+
+        FinalMapping.main(data_points=input1, date_1=input2, date_2=input3, clusters=input4)
+
     return render_template('index.html')
 
 @app.route('/', methods =['GET', 'POST'])
@@ -180,26 +195,6 @@ def calc_plots(data_points):
 
     return x1, y1
 
-
-
-#taking input from 4 inputs
-@app.route('/handle_input', methods=['POST'])
-def handle_input():
-    # Retrieve the country name from the form data
-    input1 = request.form['input1']
-    input2 = request.form['input2']
-    input3 = request.form['input3']
-    toggle = request.form.get('toggle')
-    input4 = 'm' if toggle == 'on' else 'c'
-
-    print(f" input1:  {input1}")
-    print(f" input2:  {input2}")
-    print(f" input3:  {input3}")
-    print(f" input4:  {input4}")
-    #return render_template('map2.html')
-    FinalMapping.main(data_points=input1, date_1=input2, date_2=input3, clusters=input4)
-    
-    return render_template('map2.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
