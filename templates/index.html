@@ -242,6 +242,41 @@
 
 
 
+  
+<div class="container mt-4 profile-container">
+  <div class="row">
+    {% for profile in profiles %}
+    <div class="col-md-4 mb-4">
+      <div class="card profile-card">
+        <div class="card-body">
+          <h5 class="card-title">Profile: {{ profile['ProfileLocation'] }}
+            {% if profile['ProfileGender'] == "male" %}
+                Men
+            {% elif profile['ProfileGender'] == "female" %}
+                Women
+            {% elif profile['ProfileGender'] == "non-binary" %}
+                Non-Binary People
+            {% endif %}
+          </h5>
+          <p>Gender: {{ profile['ProfileGender'] }}</p>
+          <p>Location: {{ profile['ProfileLocation'] }}</p>
+          <p>Average Sentiment: {{ profile['ProfileAvgSentiment'] }}</p>
+          <h6>Average Company Sentiment Breakdown:</h6>
+          {% for company in profile['Companies'] %}
+            <p>{{ company['CompanyName'] | capitalize }} Sentiment: {{ company['CompanyAvgSentiment'] }}</p>
+          {% endfor %}
+          <h6>Common Interests:</h6>
+          <ul>
+            {% for interest in profile['Interests'] %}
+              <li>{{interest}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 
 
     <h3 class="blank-seperator fade-in">
