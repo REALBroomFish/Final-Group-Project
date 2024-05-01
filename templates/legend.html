@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Legend</title>
+  <style>
+    .legend {
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+    .legend-title {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .legend-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .legend-label {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="legend">
+    <div class="legend-title">Marker Sentiment</div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: red;"></div>
+      <div class="legend-label">0 - 0.2</div>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: orange;"></div>
+      <div class="legend-label">0.2 - 0.4</div>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: lightgray;"></div>
+      <div class="legend-label">0.4 - 0.6</div>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: lightgreen;"></div>
+      <div class="legend-label">0.6 - 0.8</div>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: darkgreen;"></div>
+      <div class="legend-label">0.8 - 1</div>
+    </div>
+
+    <div class="legend-title">Chloropleth Colour</div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: rgb(104, 174, 97);"></div>
+      <div class="legend-label">Apple</div>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: rgb(130, 101, 168);"></div>
+      <div class="legend-label">Samsung</div>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: rgb(210, 116, 116);"></div>
+      <div class="legend-label">Huawei</div>
+    </div>
+
+  </div>
+</body>
+</html> 
