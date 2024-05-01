@@ -65,7 +65,7 @@
           <p class = "error">Invalid Country</p>
         {% else %}
         {% endif %}
-        <form action="{{ url_for('analyse_country') }}" method="post">
+        <form action="{{ url_for('index') }}" method="post">
           <label for="country_name">Enter a country for further analysis:</label><br><br>
           <input type="text" id="country_name" name="country_name" placeholder="country" class="country_input"><br>
         </form>

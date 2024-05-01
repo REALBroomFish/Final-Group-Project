@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import json
 import FinalMapping
@@ -33,35 +35,31 @@ class Account(db.Model):
     password = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
 
-
-
-@app.route('/home', methods =['GET', 'POST'])
+@app.route('/home', methods=['GET', 'POST'])
 def index():
-    numProfiles = 9
+    if not session.get("loggedin", False):
+        return redirect(url_for("login"))
+    form = Trendline_Form()
     profiles = load_profiles()
-    #print(profiles)
-    if len(profiles) > numProfiles:
-        selected_profiles = random.sample(profiles, numProfiles)
-    else:
-        selected_profiles = profiles 
+    selected_profiles = profiles[:9]
+    current_country = session.get('current_country', "China")
 
-    form = Trendline_From()
-    # check if date range is valid
-    if form.year1.data == None or form.year2.data ==None:
-        pass
-    elif form.year1.data  > form.year2.data:
-        return render_template('index.html', profiles=selected_profiles, error = True, form = form)
-    
     if request.method == 'POST':
-        input1 = form.data_number.data
-        input2 = form.year1.data
-        input3 = form.year2.data
-        toggle = request.form.get('toggle')
-        input4 = 'm' if toggle == 'on' else 'c'
+        country_name = request.form.get('country_name', "China")  # Retrieve the country name from form input
+        if country_name:  # Check if country name is provided
+            session['current_country'] = country_name  
+            with open("all_countries.json") as f:
+                    all_countries = json.load(f) 
+            trendline(all_countries)
 
-        FinalMapping.main(data_points=input1, date_1=input2, date_2=input3, clusters=input4)
+        if form.validate_on_submit():
+            FinalMapping.main(data_points=form.data_number.data, date_1=form.year1.data, date_2=form.year2.data, clusters='m' if form.toggle.data else 'c')
+        else:
+            flash("Invalid form data", "error")
 
-    return render_template('index.html', profiles=selected_profiles, form = form)
+    return render_template('index.html', profiles=selected_profiles, form=form, current_country=current_country)
+
+
 
 @app.route('/', methods=['GET', 'POST'])
 def startup():
@@ -70,6 +68,8 @@ def startup():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    if session.get("loggedin", False):
+        return redirect(url_for("index"))
     msg = ''
     if request.method == 'POST':
         username = request.form['username']
@@ -86,6 +86,8 @@ def login():
 
 @app.route('/logout')
 def logout():
+    if not session.get("loggedin", False):
+        return redirect(url_for("startup"))
     try:
         # Remove session variables related to user login
         session.pop('loggedin', None)
@@ -104,6 +106,8 @@ def logout():
  
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    if session.get("loggedin", False):
+        return redirect(url_for("login"))
     msg = ''
     if request.method == 'POST':
         username = request.form['username']
@@ -120,48 +124,18 @@ def register():
             db.session.commit()
             msg = 'You have successfully registered!'
     return render_template('register.html', msg=msg)
-
-
-
-#taking input from text file
-@app.route('/analyse_country', methods=['POST'])
-def analyse_country():
-    # Retrieve the country name from the form data
-    country_name = request.form['country_name']
-    with open("all_countries.json") as f:
-        all_countries = json.load(f)
     
-    if country_name in all_countries:
-        pass
-    else:
-        return render_template('index.html', error2 = True, form = Trendline_From())
-
-    # where calculations go so  
-
-    print(f" country name: {country_name}")
-    trendline(country_name, all_countries)   
-    print("done")
-
-    # Return a JSON response indicating success
-    #country = "Japan"
-    #return render_template('index.html', country = country)
-    return render_template('index.html', form = Trendline_From())
-
-
-
-class Trendline_From(FlaskForm):
+class Trendline_Form(FlaskForm):
     data_number = IntegerField("Enter Number of Data Points", validators=[DataRequired(), NumberRange(min = 50)])
     year1 = IntegerField("Enter First Year", validators=[DataRequired(), NumberRange(min = 2000, max = 2022)])
     year2 = IntegerField("Enter Second Year", validators=[DataRequired(), NumberRange(min = 2001, max = 2023)])
 
-    # def validate_dates(self, field):
-    #     if year1 >= year2:
-    #         raise ValidationError("Start Year must be after End Year")
 
 
 
 
-def trendline(trendline_country, all_countries):
+def trendline(all_countries):
+    trendline_country = session.get("current_country", "China")
 # plots brand sentiment over time for each brand in each country
 
     if (len(all_countries[trendline_country]['Apple']) > 0):
@@ -184,6 +158,7 @@ def trendline(trendline_country, all_countries):
     plt.title(f'Average sentiment for {trendline_country} per year')
     plt.grid()
     plt.savefig('static/images/country_data_to_image.png')
+
     # plt.show()
     
 

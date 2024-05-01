@@ -67,7 +67,7 @@ def add_layers(m):
     layer7 = folium.FeatureGroup(name='Samsung negative heat', show=False).add_to(m)
     layer8 = folium.FeatureGroup(name='Huawei positive heat', show=False).add_to(m)
     layer9 = folium.FeatureGroup(name='Huawei negative heat', show=False).add_to(m)
-    layer10 = folium.FeatureGroup(name='Chloropleth', show=False).add_to(m)  
+    layer10 = folium.FeatureGroup(name='Choropleth', show=False).add_to(m)  
     layer11 = folium.FeatureGroup(name='All countries heat', show=False).add_to(m)  
 
     # Add the layer control to the map 
@@ -87,7 +87,7 @@ def add_clusters(m):
     layer7 = folium.FeatureGroup(name='Samsung negative heat', show=False).add_to(m)
     layer8 = folium.FeatureGroup(name='Huawei positive heat', show=False).add_to(m)
     layer9 = folium.FeatureGroup(name='Huawei negative heat', show=False).add_to(m)
-    layer10 = folium.FeatureGroup(name='Chloropleth', show=False).add_to(m)  
+    layer10 = folium.FeatureGroup(name='Choropleth', show=False).add_to(m)  
     layer11 = folium.FeatureGroup(name='All countries heat', show=False).add_to(m)  
 
     # Add the layer control to the map 
@@ -292,12 +292,12 @@ def legend(m):
     m.get_root().html.add_child(folium.Element(legend_html))
 
 
-def cholorpleth(map_data, date_1, date_2, layer10):
+def choropleth(map_data, date_1, date_2, layer10):
     # # sturcutre of all countries dictionary containg country as key, value as a dictionary of brands 
     # # brands as keys and and list of sentiments and dates alternating as values in new dict-> Alergia: {Apple: [0.3, 2021, 0.1, 2013], Samsung: [0.2, 2000, 0.7, 2024], Huawei: [0.3, 2019, 0.7, 2012]}
     all_countries = {}
 
-    # # Sets country_geo as the geogson file containg the geographical data for each country needed to create the cholorpleth outlines
+    # # Sets country_geo as the geogson file containg the geographical data for each country needed to create the F outlines
     with open('countries.geojson') as handle:
         country_geo = json.loads(handle.read())
 
@@ -446,7 +446,7 @@ def main(data_points, date_1, date_2, clusters):
     total_apple, total_samsung, total_huawei, heat_data_apple_positive, heat_data_apple_negative, heat_data_samsung_positive, heat_data_samsung_negative, heat_data_huawei_positive, heat_data_huawei_negative = add_to_map(map_data, date_1, date_2, layer1, layer2, layer3, layer4, layer5, layer6, layer7, layer8, layer9, layer11)
     legend(m)
 
-    all_countries = cholorpleth(map_data, date_1, date_2, layer10)
+    all_countries = choropleth(map_data, date_1, date_2, layer10)
 
     bar_chart(total_apple, total_samsung, total_huawei)
     pi_chart_sentiment_apple(heat_data_apple_positive, heat_data_apple_negative, 'Apple')
