@@ -4,8 +4,10 @@ import json
 import FinalMapping
 from collections import defaultdict
 import random
-<<<<<<< Updated upstream
 from flask_sqlalchemy import SQLAlchemy
+from flask_wtf import FlaskForm
+from wtforms import IntegerField, ValidationError
+from wtforms.validators import DataRequired, NumberRange
 import os
 
 app = Flask(__name__)
@@ -14,12 +16,6 @@ database_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'instan
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + database_path.replace('\\', '/')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-=======
-from flask_wtf import FlaskForm
-from wtforms import IntegerField, ValidationError
-from wtforms.validators import DataRequired, NumberRange
-app = Flask(__name__)
->>>>>>> Stashed changes
 
 
 @app.route('/map2')
@@ -43,10 +39,7 @@ class Account(db.Model):
 def index():
     numProfiles = 9
     profiles = load_profiles()
-<<<<<<< Updated upstream
-=======
     #print(profiles)
->>>>>>> Stashed changes
     if len(profiles) > numProfiles:
         selected_profiles = random.sample(profiles, numProfiles)
     else:
