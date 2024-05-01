@@ -32,18 +32,18 @@ def calculate_rows(date_1, date_2, data_points):
 
 def convert_file(filename, number_rows):
     # reads the csv file
-    phones_csv = pd.read_csv(filename, nrows=number_rows)
+    data_csv = pd.read_csv(filename, nrows=number_rows)
     # uses geopandas to plot the longitude and lattitude values as geometry
-    geometry = gpd.points_from_xy(phones_csv['longitude'], phones_csv['latitude'])
+    geometry = gpd.points_from_xy(data_csv['longitude'], data_csv['latitude'])
     # creates a special geopandas data frame to store the data frm the csv file
-    geo_df = gpd.GeoDataFrame(phones_csv, geometry=geometry)
+    geo_df = gpd.GeoDataFrame(data_csv, geometry=geometry)
     # converts data fram to json format
     geojson_data = geo_df.to_json()
     # writes the data to a geojson file
-    with open('output_phone_more_final.geojson', 'w') as f:
+    with open('output_map_data.geojson', 'w') as f:
         f.write(geojson_data)
     # loads the geojson file for use in folium map
-    with open('output_phone_more_final.geojson') as f:
+    with open('output_map_data.geojson') as f:
         map_data = json.load(f)
     
     return map_data
