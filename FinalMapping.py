@@ -12,9 +12,9 @@ from folium import CustomIcon, Popup
 from branca.element import Template, MacroElement
 
 def take_input(data_points, date_1, date_2, clusters):
-    data_points = int(data_points)
-    date_1 = int(date_1)
-    date_2 = int(date_2)
+    data_points = data_points
+    date_1 = date_1
+    date_2 = date_2
     clusters = clusters
 
     return data_points, date_1, date_2, clusters

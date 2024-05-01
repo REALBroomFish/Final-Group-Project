@@ -4,6 +4,7 @@ import json
 import FinalMapping
 from collections import defaultdict
 import random
+<<<<<<< Updated upstream
 from flask_sqlalchemy import SQLAlchemy
 import os
 
@@ -13,6 +14,12 @@ database_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'instan
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + database_path.replace('\\', '/')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+=======
+from flask_wtf import FlaskForm
+from wtforms import IntegerField, ValidationError
+from wtforms.validators import DataRequired, NumberRange
+app = Flask(__name__)
+>>>>>>> Stashed changes
 
 
 @app.route('/map2')
@@ -36,29 +43,32 @@ class Account(db.Model):
 def index():
     numProfiles = 9
     profiles = load_profiles()
+<<<<<<< Updated upstream
+=======
+    #print(profiles)
+>>>>>>> Stashed changes
     if len(profiles) > numProfiles:
         selected_profiles = random.sample(profiles, numProfiles)
     else:
         selected_profiles = profiles 
+
+    form = Trendline_From()
+    # check if date range is valid
+    if form.year1.data == None or form.year2.data ==None:
+        pass
+    elif form.year1.data  > form.year2.data:
+        return render_template('index.html', profiles=selected_profiles, error = True, form = form)
+    
     if request.method == 'POST':
-        input1 = request.form['input1']
-        input2 = request.form['input2']
-        input3 = request.form['input3']
+        input1 = form.data_number.data
+        input2 = form.year1.data
+        input3 = form.year2.data
         toggle = request.form.get('toggle')
         input4 = 'm' if toggle == 'on' else 'c'
 
-        # if (input2 < 2000) or (input3 > 2023) or (input2 > input3):
-
-
-        # print(f" input1:  {input1}")
-        # print(f" input2:  {input2}")
-        # print(f" input3:  {input3}")
-        # print(f" input4:  {input4}")
-
-
         FinalMapping.main(data_points=input1, date_1=input2, date_2=input3, clusters=input4)
 
-    return render_template('index.html', profiles=selected_profiles)
+    return render_template('index.html', profiles=selected_profiles, form = form)
 
 @app.route('/', methods=['GET', 'POST'])
 def startup():
@@ -127,7 +137,11 @@ def analyse_country():
     country_name = request.form['country_name']
     with open("all_countries.json") as f:
         all_countries = json.load(f)
-
+    
+    if country_name in all_countries:
+        pass
+    else:
+        return render_template('index.html', error2 = True, form = Trendline_From())
 
     # where calculations go so  
 
@@ -138,7 +152,19 @@ def analyse_country():
     # Return a JSON response indicating success
     #country = "Japan"
     #return render_template('index.html', country = country)
-    return render_template('index.html')
+    return render_template('index.html', form = Trendline_From())
+
+
+
+class Trendline_From(FlaskForm):
+    data_number = IntegerField("Enter Number of Data Points", validators=[DataRequired(), NumberRange(min = 50)])
+    year1 = IntegerField("Enter First Year", validators=[DataRequired(), NumberRange(min = 2000, max = 2022)])
+    year2 = IntegerField("Enter Second Year", validators=[DataRequired(), NumberRange(min = 2001, max = 2023)])
+
+    # def validate_dates(self, field):
+    #     if year1 >= year2:
+    #         raise ValidationError("Start Year must be after End Year")
+
 
 
 

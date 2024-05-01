@@ -133,6 +133,10 @@ body {
 
 /* text box inputs*/
 
+.error{
+  color: red;
+}
+
 .country_input {
   text-align:center;
 }
