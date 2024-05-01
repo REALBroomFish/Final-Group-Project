@@ -41,10 +41,14 @@ def index():
         toggle = request.form.get('toggle')
         input4 = 'm' if toggle == 'on' else 'c'
 
-        print(f" input1:  {input1}")
-        print(f" input2:  {input2}")
-        print(f" input3:  {input3}")
-        print(f" input4:  {input4}")
+        # if (input2 < 2000) or (input3 > 2023) or (input2 > input3):
+
+
+        # print(f" input1:  {input1}")
+        # print(f" input2:  {input2}")
+        # print(f" input3:  {input3}")
+        # print(f" input4:  {input4}")
+
 
         FinalMapping.main(data_points=input1, date_1=input2, date_2=input3, clusters=input4)
 
@@ -156,7 +160,7 @@ def trendline(trendline_country, all_countries):
     plt.title(f'Average sentiment for {trendline_country} per year')
     plt.grid()
     plt.savefig('static/images/country_data_to_image.png')
-    #plt.show()
+    # plt.show()
     
 
 
