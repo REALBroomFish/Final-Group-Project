@@ -355,13 +355,13 @@ def cholorpleth(map_data, date_1, date_2, layer10):
 
         # plots each countries shape and sets colour based on brand with most positive sentiment
         if ((sentiment_Apple >= sentiment_Huawei) and (sentiment_Apple >= sentiment_Samsung)):
-            folium.GeoJson(current_country, name='countries', style_function=lambda x: {"fillColor": "green"}, popup=folium.Popup(f"{place}:  Apple sentiment: {sentiment_Apple}, Samsung sentiment: {sentiment_Samsung}, Huawei sentiment: {sentiment_Huawei}", parse_html=True, max_width=500)).add_to(layer10)
+            folium.GeoJson(current_country, name='countries', style_function=lambda x: {"fillColor": "green"}, popup=popup2).add_to(layer10)
 
         elif ((sentiment_Samsung >= sentiment_Huawei) and (sentiment_Samsung >= sentiment_Huawei)):
-            folium.GeoJson(current_country, name='countries', style_function=lambda x: {"fillColor": "blue"}, popup=folium.Popup(f"{place}:  Apple sentiment: {sentiment_Apple}, Samsung sentiment: {sentiment_Samsung}, Huawei sentiment: {sentiment_Huawei}", parse_html=True, max_width=500)).add_to(layer10)
+            folium.GeoJson(current_country, name='countries', style_function=lambda x: {"fillColor": "blue"}, popup=popup2).add_to(layer10)
 
         elif ((sentiment_Huawei >= sentiment_Apple) and (sentiment_Huawei >= sentiment_Samsung)):
-            folium.GeoJson(current_country, name='countries', style_function=lambda x: {"fillColor": "red"}, popup=folium.Popup(f"{place}: Apple sentiment: {sentiment_Apple}, Samsung sentiment: {sentiment_Samsung}, Huawei sentiment: {sentiment_Huawei}", parse_html=True, max_width=500)).add_to(layer10)
+            folium.GeoJson(current_country, name='countries', style_function=lambda x: {"fillColor": "red"}, popup=popup2).add_to(layer10)
     
     return all_countries
 
