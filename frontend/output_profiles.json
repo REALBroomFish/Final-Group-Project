@@ -1,0 +1,2288 @@
+[
+    {
+        "ProfileNumber": 0,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4874,
+        "ProfileLocation": "Afghanistan",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5049
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4825
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.475
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "aquarium care",
+            "movie watching"
+        ]
+    },
+    {
+        "ProfileNumber": 1,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.5036,
+        "ProfileLocation": "Algeria",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5194
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5019
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4894
+            }
+        ],
+        "Interests": [
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 2,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5104,
+        "ProfileLocation": "Angola",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5171
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5065
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5077
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 3,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.499,
+        "ProfileLocation": "Argentina",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4945
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4953
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5072
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "aquarium care",
+            "cheese making"
+        ]
+    },
+    {
+        "ProfileNumber": 4,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5288,
+        "ProfileLocation": "Aruba",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4881
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.57
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5283
+            }
+        ],
+        "Interests": [
+            "drone piloting",
+            "mixology",
+            "philosophy",
+            "fishing",
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 5,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4968,
+        "ProfileLocation": "Australia",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.484
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5139
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4926
+            }
+        ],
+        "Interests": [
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 6,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5118,
+        "ProfileLocation": "Austria",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5036
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4948
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5372
+            }
+        ],
+        "Interests": [
+            "camping",
+            "robotics",
+            "astronomy",
+            "gardening",
+            "non-fiction"
+        ]
+    },
+    {
+        "ProfileNumber": 7,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.5233,
+        "ProfileLocation": "Azerbaijan",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5183
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5567
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4949
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "meditation",
+            "theater",
+            "woodworking",
+            "novel reading"
+        ]
+    },
+    {
+        "ProfileNumber": 8,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4811,
+        "ProfileLocation": "Bangladesh",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4321
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4889
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5224
+            }
+        ],
+        "Interests": [
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 9,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.496,
+        "ProfileLocation": "Belarus",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5038
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4901
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.494
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "video gaming"
+        ]
+    },
+    {
+        "ProfileNumber": 10,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4905,
+        "ProfileLocation": "Belgium",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4913
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5015
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4788
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 11,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5093,
+        "ProfileLocation": "Bolivia",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4991
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.509
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5199
+            }
+        ],
+        "Interests": [
+            "wine tasting"
+        ]
+    },
+    {
+        "ProfileNumber": 12,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5039,
+        "ProfileLocation": "Brazil",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5121
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.495
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5045
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "interior decorating"
+        ]
+    },
+    {
+        "ProfileNumber": 13,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.5285,
+        "ProfileLocation": "Burkina Faso",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.545
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5189
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5216
+            }
+        ],
+        "Interests": [
+            "creative writing",
+            "painting",
+            "robotics",
+            "museum visits",
+            "book club participation"
+        ]
+    },
+    {
+        "ProfileNumber": 14,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5097,
+        "ProfileLocation": "Burundi",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5296
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4909
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5086
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "camping"
+        ]
+    },
+    {
+        "ProfileNumber": 15,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5264,
+        "ProfileLocation": "Cameroon",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5333
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5358
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.51
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "cooking",
+            "opera"
+        ]
+    },
+    {
+        "ProfileNumber": 16,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.5116,
+        "ProfileLocation": "Canada",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5231
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.51
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5017
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "sewing",
+            "stamp collecting",
+            "fiction"
+        ]
+    },
+    {
+        "ProfileNumber": 17,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4885,
+        "ProfileLocation": "Chad",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4815
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4938
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4902
+            }
+        ],
+        "Interests": [
+            "3D printing"
+        ]
+    },
+    {
+        "ProfileNumber": 18,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.498,
+        "ProfileLocation": "Chile",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4857
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5145
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4938
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "grilling"
+        ]
+    },
+    {
+        "ProfileNumber": 19,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4984,
+        "ProfileLocation": "China",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.496
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5001
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.499
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "stamp collecting"
+        ]
+    },
+    {
+        "ProfileNumber": 20,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5042,
+        "ProfileLocation": "Colombia",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5227
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4904
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4997
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 21,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5157,
+        "ProfileLocation": "Congo (Kinshasa)",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5432
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.486
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5179
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "app development",
+            "America"
+        ]
+    },
+    {
+        "ProfileNumber": 22,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5012,
+        "ProfileLocation": "Cuba",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5011
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4822
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5203
+            }
+        ],
+        "Interests": [
+            "cultural festivals",
+            "movie watching",
+            "podcast listening",
+            "electronics"
+        ]
+    },
+    {
+        "ProfileNumber": 23,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5023,
+        "ProfileLocation": "Dominican Republic",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4825
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5052
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5192
+            }
+        ],
+        "Interests": [
+            "theater",
+            "holistic health",
+            "football",
+            "opera"
+        ]
+    },
+    {
+        "ProfileNumber": 24,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.4893,
+        "ProfileLocation": "Ecuador",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5069
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4975
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4635
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "ecology",
+            "rock"
+        ]
+    },
+    {
+        "ProfileNumber": 25,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.499,
+        "ProfileLocation": "Egypt",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4982
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.506
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4927
+            }
+        ],
+        "Interests": [
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 26,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5077,
+        "ProfileLocation": "Ethiopia",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5126
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5058
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5047
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "cooking",
+            "herbalism",
+            "history"
+        ]
+    },
+    {
+        "ProfileNumber": 27,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4983,
+        "ProfileLocation": "France",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4841
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5059
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5047
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "novel reading",
+            "cheese making"
+        ]
+    },
+    {
+        "ProfileNumber": 28,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.5123,
+        "ProfileLocation": "Germany",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5247
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4997
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5126
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 29,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4859,
+        "ProfileLocation": "Ghana",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4656
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4888
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5032
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 30,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.4944,
+        "ProfileLocation": "Greece",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4668
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5224
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4941
+            }
+        ],
+        "Interests": [
+            "drone piloting",
+            "physics",
+            "yoga",
+            "ecology"
+        ]
+    },
+    {
+        "ProfileNumber": 31,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4855,
+        "ProfileLocation": "Guinea",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4235
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5245
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5086
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 32,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.5152,
+        "ProfileLocation": "Haiti",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5384
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5173
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.49
+            }
+        ],
+        "Interests": [
+            "video gaming",
+            "gardening",
+            "dog training"
+        ]
+    },
+    {
+        "ProfileNumber": 33,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.4663,
+        "ProfileLocation": "Honduras",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4724
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4369
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4896
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "archery"
+        ]
+    },
+    {
+        "ProfileNumber": 34,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4956,
+        "ProfileLocation": "Hungary",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5094
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4745
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.503
+            }
+        ],
+        "Interests": [
+            "stand-up comedy",
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 35,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.5005,
+        "ProfileLocation": "India",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5046
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4945
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5023
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "non-fiction"
+        ]
+    },
+    {
+        "ProfileNumber": 36,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5065,
+        "ProfileLocation": "Indonesia",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5228
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4587
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5381
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "sci-fi",
+            "Europe"
+        ]
+    },
+    {
+        "ProfileNumber": 37,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.5098,
+        "ProfileLocation": "Iran",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5093
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5108
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5095
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 38,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5029,
+        "ProfileLocation": "Iraq",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5121
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4835
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5131
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "poetry writing",
+            "vegetarian",
+            "AI"
+        ]
+    },
+    {
+        "ProfileNumber": 39,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5233,
+        "ProfileLocation": "Israel",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.486
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5416
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5422
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "herbalism"
+        ]
+    },
+    {
+        "ProfileNumber": 40,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4848,
+        "ProfileLocation": "Italy",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4874
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4789
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4879
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 41,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.52,
+        "ProfileLocation": "Ivory Coast",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5267
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5042
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5292
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "blogging",
+            "basketball"
+        ]
+    },
+    {
+        "ProfileNumber": 42,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5006,
+        "ProfileLocation": "Japan",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5003
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5008
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5006
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 43,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.5007,
+        "ProfileLocation": "Jordan",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5061
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4921
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5039
+            }
+        ],
+        "Interests": [
+            "virtual reality",
+            "interior decorating",
+            "gardening",
+            "comic book collecting"
+        ]
+    },
+    {
+        "ProfileNumber": 44,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5226,
+        "ProfileLocation": "Kazakhstan",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.516
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5335
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5182
+            }
+        ],
+        "Interests": [
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 45,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5134,
+        "ProfileLocation": "Kenya",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5268
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5111
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5023
+            }
+        ],
+        "Interests": [
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 46,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5316,
+        "ProfileLocation": "Madagascar",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5493
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5054
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5402
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "electronics",
+            "meditation"
+        ]
+    },
+    {
+        "ProfileNumber": 47,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5103,
+        "ProfileLocation": "Malawi",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.524
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4902
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5167
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "novel reading",
+            "hip hop"
+        ]
+    },
+    {
+        "ProfileNumber": 48,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5027,
+        "ProfileLocation": "Malaysia",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5102
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.475
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5229
+            }
+        ],
+        "Interests": [
+            "mixology",
+            "interior decorating",
+            "theater",
+            "calligraphy"
+        ]
+    },
+    {
+        "ProfileNumber": 49,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4945,
+        "ProfileLocation": "Mali",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5034
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4877
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4924
+            }
+        ],
+        "Interests": [
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 50,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4984,
+        "ProfileLocation": "Mexico",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4965
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4908
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.508
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "woodworking",
+            "herbalism"
+        ]
+    },
+    {
+        "ProfileNumber": 51,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4995,
+        "ProfileLocation": "Morocco",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5148
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4885
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4954
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "non-fiction"
+        ]
+    },
+    {
+        "ProfileNumber": 52,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5055,
+        "ProfileLocation": "Mozambique",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4849
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4986
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5329
+            }
+        ],
+        "Interests": [
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 53,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.52,
+        "ProfileLocation": "Myanmar",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4932
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5517
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5152
+            }
+        ],
+        "Interests": [
+            "physics",
+            "gardening",
+            "baking",
+            "gaming"
+        ]
+    },
+    {
+        "ProfileNumber": 54,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.4952,
+        "ProfileLocation": "Nepal",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5057
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5138
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4662
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "painting"
+        ]
+    },
+    {
+        "ProfileNumber": 55,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4904,
+        "ProfileLocation": "Netherlands",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4812
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4887
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5013
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "vegetarian"
+        ]
+    },
+    {
+        "ProfileNumber": 56,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4879,
+        "ProfileLocation": "Nicaragua",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4661
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5445
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4529
+            }
+        ],
+        "Interests": [
+            "archery",
+            "tennis",
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 57,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4999,
+        "ProfileLocation": "Niger",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5019
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5181
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4797
+            }
+        ],
+        "Interests": [
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 58,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4993,
+        "ProfileLocation": "Nigeria",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5025
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.494
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5013
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "drone piloting",
+            "language learning",
+            "movie watching"
+        ]
+    },
+    {
+        "ProfileNumber": 59,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4991,
+        "ProfileLocation": "Pakistan",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4978
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4996
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4997
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "ballet",
+            "botany"
+        ]
+    },
+    {
+        "ProfileNumber": 60,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.492,
+        "ProfileLocation": "Peru",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4859
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4828
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5073
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "hiking",
+            "skincare",
+            "vegan"
+        ]
+    },
+    {
+        "ProfileNumber": 61,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5094,
+        "ProfileLocation": "Philippines",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.495
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5281
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5051
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 62,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5046,
+        "ProfileLocation": "Poland",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5259
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4991
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4888
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "bird watching",
+            "robotics",
+            "vegetarian"
+        ]
+    },
+    {
+        "ProfileNumber": 63,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5106,
+        "ProfileLocation": "Portugal",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5154
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.527
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4894
+            }
+        ],
+        "Interests": [
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 64,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4882,
+        "ProfileLocation": "Romania",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4807
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4996
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4844
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "video gaming",
+            "grilling",
+            "astronomy"
+        ]
+    },
+    {
+        "ProfileNumber": 65,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4934,
+        "ProfileLocation": "Russia",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4876
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4905
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5023
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "electronics",
+            "basketball",
+            "painting"
+        ]
+    },
+    {
+        "ProfileNumber": 66,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5063,
+        "ProfileLocation": "Rwanda",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4763
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5056
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.537
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "Europe"
+        ]
+    },
+    {
+        "ProfileNumber": 67,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4995,
+        "ProfileLocation": "Saudi Arabia",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5154
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5225
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4607
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "grilling",
+            "aromatherapy"
+        ]
+    },
+    {
+        "ProfileNumber": 68,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4974,
+        "ProfileLocation": "Senegal",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4732
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5157
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5033
+            }
+        ],
+        "Interests": [
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 69,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4874,
+        "ProfileLocation": "Somalia",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5012
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4897
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4711
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "book club participation",
+            "gardening",
+            "non-fiction"
+        ]
+    },
+    {
+        "ProfileNumber": 70,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5068,
+        "ProfileLocation": "South Africa",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4943
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5093
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5166
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "cooking"
+        ]
+    },
+    {
+        "ProfileNumber": 71,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5101,
+        "ProfileLocation": "South Korea",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4968
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5098
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5236
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "football"
+        ]
+    },
+    {
+        "ProfileNumber": 72,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4649,
+        "ProfileLocation": "South Sudan",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.457
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4809
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4569
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "calligraphy",
+            "tennis",
+            "ecology",
+            "aromatherapy"
+        ]
+    },
+    {
+        "ProfileNumber": 73,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.5102,
+        "ProfileLocation": "Spain",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.481
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5294
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.52
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 74,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4875,
+        "ProfileLocation": "Sri Lanka",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4671
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4909
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5046
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "museum visits",
+            "hiking",
+            "non-fiction",
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 75,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5047,
+        "ProfileLocation": "Sudan",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4857
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5354
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.493
+            }
+        ],
+        "Interests": [
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 76,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4773,
+        "ProfileLocation": "Sweden",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.477
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4948
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4601
+            }
+        ],
+        "Interests": [
+            "martial arts",
+            "botany",
+            "archery",
+            "calligraphy",
+            "physics"
+        ]
+    },
+    {
+        "ProfileNumber": 77,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5025,
+        "ProfileLocation": "Syria",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4943
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.505
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5081
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "3D printing",
+            "robotics",
+            "fashion design",
+            "fantasy"
+        ]
+    },
+    {
+        "ProfileNumber": 78,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.4651,
+        "ProfileLocation": "Tanzania",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4808
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4617
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4528
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "fiction",
+            "calligraphy",
+            "stamp collecting"
+        ]
+    },
+    {
+        "ProfileNumber": 79,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5191,
+        "ProfileLocation": "Tunisia",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5052
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5303
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5219
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "hiking",
+            "chemistry experiments",
+            "gaming"
+        ]
+    },
+    {
+        "ProfileNumber": 80,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5071,
+        "ProfileLocation": "Turkey",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5159
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5098
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4955
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "AI",
+            "philosophy",
+            "stand-up comedy"
+        ]
+    },
+    {
+        "ProfileNumber": 81,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.5078,
+        "ProfileLocation": "Uganda",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5194
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4956
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.5085
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "aromatherapy",
+            "interior decorating"
+        ]
+    },
+    {
+        "ProfileNumber": 82,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.493,
+        "ProfileLocation": "Ukraine",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4875
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5169
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4747
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics"
+        ]
+    },
+    {
+        "ProfileNumber": 83,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.4907,
+        "ProfileLocation": "United Kingdom",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4938
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4791
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4993
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 84,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.5,
+        "ProfileLocation": "United States",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5037
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4972
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4991
+            }
+        ],
+        "Interests": [
+            "gardening",
+            "robotics",
+            "non-fiction"
+        ]
+    },
+    {
+        "ProfileNumber": 85,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4878,
+        "ProfileLocation": "Uzbekistan",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5271
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4595
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4768
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "landscaping",
+            "chocolate making"
+        ]
+    },
+    {
+        "ProfileNumber": 86,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4962,
+        "ProfileLocation": "Venezuela",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5236
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4896
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4755
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "vegetarian",
+            "fashion design"
+        ]
+    },
+    {
+        "ProfileNumber": 87,
+        "ProfileGender": "non-binary",
+        "ProfileAvgSentiment": 0.4986,
+        "ProfileLocation": "Vietnam",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4929
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.5058
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4971
+            }
+        ],
+        "Interests": [
+            "gardening"
+        ]
+    },
+    {
+        "ProfileNumber": 88,
+        "ProfileGender": "male",
+        "ProfileAvgSentiment": 0.4878,
+        "ProfileLocation": "Yemen",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.478
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.504
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4815
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "martial arts",
+            "ecotourism",
+            "comic book collecting"
+        ]
+    },
+    {
+        "ProfileNumber": 89,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4894,
+        "ProfileLocation": "Zambia",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.4877
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4934
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4871
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "gardening",
+            "stamp collecting"
+        ]
+    },
+    {
+        "ProfileNumber": 90,
+        "ProfileGender": "female",
+        "ProfileAvgSentiment": 0.4993,
+        "ProfileLocation": "Zimbabwe",
+        "Companies": [
+            {
+                "CompanyName": "apple",
+                "CompanyAvgSentiment": 0.5117
+            },
+            {
+                "CompanyName": "huawei",
+                "CompanyAvgSentiment": 0.4938
+            },
+            {
+                "CompanyName": "samsung",
+                "CompanyAvgSentiment": 0.4924
+            }
+        ],
+        "Interests": [
+            "robotics",
+            "comic book collecting",
+            "gardening"
+        ]
+    }
+]
