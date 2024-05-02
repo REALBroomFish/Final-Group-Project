@@ -39,28 +39,28 @@ class Account(db.Model):
 def index():
     if not session.get("loggedin", False):
         return redirect(url_for("login"))
-    form = Trendline_Form()
+    
+
+    altName = Trendline_Form()
     profiles = load_profiles()
     selected_profiles = profiles[:9]
     current_country = session.get('current_country', "China")
-
     if request.method == 'POST':
-        country_name = request.form.get('country_name', "China")  # Retrieve the country name from form input
+        country_name = request.form.get('country_name', "China")  
         if country_name:  # Check if country name is provided
             session['current_country'] = country_name  
             with open("all_countries.json") as f:
                     all_countries = json.load(f) 
-            trendline(all_countries)
+            if country_name in all_countries:
+                trendline(all_countries)
 
-        if form.validate_on_submit():
-            toggle = request.form.get('toggle')
-            input4 = 'm' if toggle == 'on' else 'c' 
-            FinalMapping.main(data_points=form.data_number.data, date_1=form.year1.data, date_2=form.year2.data, clusters=input4)
-        else:
+        if not altName.validate_on_submit():
             flash("Invalid form data", "error")
-
-    return render_template('index.html', profiles=selected_profiles, form=form, current_country=current_country)
-
+            
+        toggle = request.form.get('toggle')
+        input4 = 'm' if toggle == 'on' else 'c' 
+        FinalMapping.main(data_points=altName.data_number.data, date_1=altName.year1.data, date_2=altName.year2.data, clusters=input4)
+    return render_template('index.html', profiles=selected_profiles, form=altName, current_country=current_country)
 
 
 @app.route('/', methods=['GET', 'POST'])
