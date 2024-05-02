@@ -53,7 +53,9 @@ def index():
             trendline(all_countries)
 
         if form.validate_on_submit():
-            FinalMapping.main(data_points=form.data_number.data, date_1=form.year1.data, date_2=form.year2.data, clusters='m' if form.toggle.data else 'c')
+            toggle = request.form.get('toggle')
+            input4 = 'm' if toggle == 'on' else 'c' 
+            FinalMapping.main(data_points=form.data_number.data, date_1=form.year1.data, date_2=form.year2.data, clusters=input4)
         else:
             flash("Invalid form data", "error")
 
