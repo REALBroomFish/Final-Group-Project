@@ -54,9 +54,7 @@ def index():
         toggle = map_form.toggle.data
 
         FinalMapping.main(data_points=data, date_1=year1, date_2=year2, clusters=toggle)
-        
-        # return render_template('index.html', map_form=map_form, analyse_trendline_form=analyse_trendline_form)
-    
+            
 
     if analyse_trendline_form.submit2.data and analyse_trendline_form.validate():
         trendline_country = analyse_trendline_form.data_country.data
@@ -66,13 +64,6 @@ def index():
 
         if trendline_country in all_countries:
             trendline(all_countries, trendline_country)
-        else:
-            # add error in here
-            print('Not in all countries')
-
-        # return render_template('index.html', map_form=map_form, analyse_trendline_form=analyse_trendline_form)
-    
-
 
     return render_template('index.html', map_form=map_form, analyse_trendline_form=analyse_trendline_form)
 
@@ -143,6 +134,7 @@ def register():
             msg = 'You have successfully registered!'
     return render_template('register.html', msg=msg)
     
+
 class Map_Form(FlaskForm):
     data_number = IntegerField("Enter Number of Data Points", validators=[DataRequired(), NumberRange(min = 50)])
     year1 = IntegerField("Enter First Year", validators=[DataRequired(), NumberRange(min = 2000, max = 2022)])
@@ -151,9 +143,35 @@ class Map_Form(FlaskForm):
     submit1 = SubmitField('Generate Map')
 
 
+    def validate(self):
+        if not super().validate():
+            return False
+        
+        if self.year1.data >= self.year2.data:
+            self.year1.errors.append('Start year must be before end year')
+            return False
+        
+        return True
+
+
 class Analyse_Trendline_Form(FlaskForm):
     data_country = StringField("Enter Country to Analyse", validators=[DataRequired()])
     submit2 = SubmitField('Analyse Country')
+
+    def validate(self):
+        if not super().validate():
+            return False
+        
+        with open("all_countries.json") as f:
+            all_countries = json.load(f)    
+
+        if self.data_country.data not in all_countries:
+            self.data_country.errors.append('Incorrect country name entered')
+
+        return True
+
+
+
 
 
 
