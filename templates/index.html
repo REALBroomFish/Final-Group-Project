@@ -1,4 +1,4 @@
-
+{% import "bootstrap/wtf.html" as wtf %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -65,39 +65,14 @@
           <p class = "error">Invalid Country</p>
         {% else %}
         {% endif %}
-        <form action="{{ url_for('index') }}" method="post">
-          <label for="country_name">Enter a country for further analysis:</label><br><br>
-          <input type="text" id="country_name" name="country_name" placeholder="country" class="country_input"><br>
-        </form>
-        <br><br>
-        <!--4 inputs grid-->
-        {% if error is defined %}
-              <p class = "error">Invalid Date Range</p>
-        {% else %}
-        {% endif %}
-        <form action="{{ url_for('index') }}" method="post">
-          <div class="four_input_grid">
-            <label for="input1">No. data points:</label>
-            {{ form.data_number(id="input1") }}
-            <label for="input2">Start year:</label>
-            {{ form.year1(id="input2")}}
-            <label for="input3">End year:</label>
-            {{ form.year2(id="input2")}}
-            <label for="input4">Clusters/Markers:</label>
-            <!--<input type="text" id="input4" placeholder="Input 4">-->
-            <input type="hidden" id="input4" name="input4" value="marking">
-            <input type="checkbox" id="switch" class="checkbox" name="toggle">
-            <label for="switch" class="toggle"><p></p></label>
 
-              <div class="button-container">
-                <button type="submit">Submit</button>
-              </div>
+
+        {{ wtf.quick_form(analyse_trendline_form) }}
+
+        {{ wtf.quick_form(map_form) }}
       
-          </div>
-        </form>
-        </div>
+
         
-      </div>
       </div>
     </h3>
 

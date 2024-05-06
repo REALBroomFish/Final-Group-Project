@@ -197,6 +197,8 @@ def pi_chart_sentiment_apple(total_brand_positve, total_brand_negative, brand):
     plt.title(f'Positive Vs Negative posts for: {brand}')
     plt.legend(labels, loc='upper left')
     plt.savefig('static/images/graph4.png')
+    plt.close()
+
 
 def pi_chart_sentiment_samsung(total_brand_positve, total_brand_negative, brand):
     labels = [f'Positive: {len(total_brand_positve)}', f'Negative: {len(total_brand_negative)}']
@@ -209,6 +211,8 @@ def pi_chart_sentiment_samsung(total_brand_positve, total_brand_negative, brand)
     plt.title(f'Positive Vs Negative posts for: {brand}')
     plt.legend(labels, loc='upper left')
     plt.savefig('static/images/graph5.png')
+    plt.close()
+
 
 def pi_chart_sentiment_huawei(total_brand_positve, total_brand_negative, brand):
     labels = [f'Positive: {len(total_brand_positve)}', f'Negative: {len(total_brand_negative)}']
@@ -221,6 +225,8 @@ def pi_chart_sentiment_huawei(total_brand_positve, total_brand_negative, brand):
     plt.title(f'Positive Vs Negative posts for: {brand}')
     plt.legend(labels, loc='upper left')
     plt.savefig('static/images/graph6.png')
+    plt.close()
+
 
 # displays total number of posts per brand
 def bar_chart(total_apple, total_samsung, total_huawei):
@@ -232,6 +238,8 @@ def bar_chart(total_apple, total_samsung, total_huawei):
     plt.title('Number of posts per brand')
     plt.legend(loc='upper left')
     plt.savefig('static/images/graph3.png')
+    plt.close()
+
     #plt.show()
      
 
@@ -262,6 +270,8 @@ def number_posts(all_countries, flag):
         ax.bar(countries, post_numbers, label=countries)
         plt.legend(loc='upper left')
         plt.savefig('static/images/graph2.png')
+        plt.close()
+
 
     else:
         for country, posts_count in sorted_countries[-10:]:
@@ -272,6 +282,8 @@ def number_posts(all_countries, flag):
         ax.bar(countries, post_numbers, label=countries)
         plt.legend(loc='upper left')
         plt.savefig('static/images/graph7.png')
+        plt.close()
+
 
 
   
@@ -388,6 +400,8 @@ def trendline(trendline_country, all_countries):
     plt.ylabel('Sentiment')
     plt.title(f'Average sentiment for {trendline_country} per year')
     plt.grid()
+    plt.close()
+
     #plt.show()
 
 

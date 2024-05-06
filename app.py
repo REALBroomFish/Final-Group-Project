@@ -8,9 +8,11 @@ from collections import defaultdict
 import random
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
-from wtforms import IntegerField, ValidationError
+from wtforms import IntegerField, ValidationError, SubmitField, StringField, RadioField
 from wtforms.validators import DataRequired, NumberRange
 import os
+from flask_bootstrap import Bootstrap
+
 
 app = Flask(__name__)
 app.secret_key = 'b_5#y2L"F4Q8z\n\xec]/'
@@ -18,6 +20,8 @@ database_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'instan
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + database_path.replace('\\', '/')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+bootstrap = Bootstrap(app)
+
 
 
 @app.route('/map2')
@@ -40,27 +44,39 @@ def index():
     if not session.get("loggedin", False):
         return redirect(url_for("login"))
     
+    map_form = Map_Form()
+    analyse_trendline_form = Analyse_Trendline_Form()
 
-    altName = Trendline_Form()
-    profiles = load_profiles()
-    selected_profiles = profiles[:9]
-    current_country = session.get('current_country', "China")
-    if request.method == 'POST':
-        country_name = request.form.get('country_name', "China")  
-        if country_name:  # Check if country name is provided
-            session['current_country'] = country_name  
-            with open("all_countries.json") as f:
-                    all_countries = json.load(f) 
-            if country_name in all_countries:
-                trendline(all_countries)
+    if map_form.submit1.data and map_form.validate():
+        data = map_form.data_number.data
+        year1 = map_form.year1.data
+        year2 = map_form.year2.data
+        toggle = map_form.toggle.data
 
-        if not altName.validate_on_submit():
-            flash("Invalid form data", "error")
-            
-        toggle = request.form.get('toggle')
-        input4 = 'm' if toggle == 'on' else 'c' 
-        FinalMapping.main(data_points=altName.data_number.data, date_1=altName.year1.data, date_2=altName.year2.data, clusters=input4)
-    return render_template('index.html', profiles=selected_profiles, form=altName, current_country=current_country)
+        FinalMapping.main(data_points=data, date_1=year1, date_2=year2, clusters=toggle)
+        
+        # return render_template('index.html', map_form=map_form, analyse_trendline_form=analyse_trendline_form)
+    
+
+    if analyse_trendline_form.submit2.data and analyse_trendline_form.validate():
+        trendline_country = analyse_trendline_form.data_country.data
+
+        with open("all_countries.json") as f:
+            all_countries = json.load(f) 
+
+        if trendline_country in all_countries:
+            trendline(all_countries, trendline_country)
+        else:
+            # add error in here
+            print('Not in all countries')
+
+        # return render_template('index.html', map_form=map_form, analyse_trendline_form=analyse_trendline_form)
+    
+
+
+    return render_template('index.html', map_form=map_form, analyse_trendline_form=analyse_trendline_form)
+
+
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -127,17 +143,22 @@ def register():
             msg = 'You have successfully registered!'
     return render_template('register.html', msg=msg)
     
-class Trendline_Form(FlaskForm):
+class Map_Form(FlaskForm):
     data_number = IntegerField("Enter Number of Data Points", validators=[DataRequired(), NumberRange(min = 50)])
     year1 = IntegerField("Enter First Year", validators=[DataRequired(), NumberRange(min = 2000, max = 2022)])
     year2 = IntegerField("Enter Second Year", validators=[DataRequired(), NumberRange(min = 2001, max = 2023)])
+    toggle = RadioField("Choose Clusters or Markers", choices=[('c', 'Clusters'), ('m', 'Markers')], validators=[DataRequired()])
+    submit1 = SubmitField('Generate Map')
+
+
+class Analyse_Trendline_Form(FlaskForm):
+    data_country = StringField("Enter Country to Analyse", validators=[DataRequired()])
+    submit2 = SubmitField('Analyse Country')
 
 
 
 
-
-def trendline(all_countries):
-    trendline_country = session.get("current_country", "China")
+def trendline(all_countries, trendline_country):
 # plots brand sentiment over time for each brand in each country
 
     if (len(all_countries[trendline_country]['Apple']) > 0):
@@ -153,6 +174,7 @@ def trendline(all_countries):
         plt.plot(x_huawei, y_huawei, 'r-', label='Huawei')
 
     # plt.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
+    # plt.clf()
     plt.xticks(range(2000,2025,2))
     plt.legend(loc='upper left')
     plt.xlabel('Date')
@@ -160,6 +182,8 @@ def trendline(all_countries):
     plt.title(f'Average sentiment for {trendline_country} per year')
     plt.grid()
     plt.savefig('static/images/country_data_to_image.png')
+    plt.close()
+
 
     # plt.show()
     
