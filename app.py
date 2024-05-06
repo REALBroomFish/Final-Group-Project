@@ -44,6 +44,9 @@ def index():
     if not session.get("loggedin", False):
         return redirect(url_for("login"))
     
+    profiles = load_profiles()
+    selected_profiles = profiles[:9]
+    
     map_form = Map_Form()
     analyse_trendline_form = Analyse_Trendline_Form()
 
@@ -65,7 +68,7 @@ def index():
         if trendline_country in all_countries:
             trendline(all_countries, trendline_country)
 
-    return render_template('index.html', map_form=map_form, analyse_trendline_form=analyse_trendline_form)
+    return render_template('index.html', profiles=selected_profiles, map_form=map_form, analyse_trendline_form=analyse_trendline_form)
 
 
 
