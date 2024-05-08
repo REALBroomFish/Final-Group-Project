@@ -23,8 +23,8 @@ def take_input(data_points, date_1, date_2, clusters):
 def calculate_rows(date_1, date_2, data_points):
     number_years = date_2 - date_1
     number_rows = round((data_points * (23 / number_years)))
-    if number_rows > len(pd.read_csv('output_people_more_adjusted_valid.csv')):
-        number_rows = len(pd.read_csv('output_people_more_adjusted_valid.csv'))
+    if number_rows > len(pd.read_csv('People_Data.csv')):
+        number_rows = len(pd.read_csv('People_Data.csv'))
         print('Maximum data points reached')
     
     return number_rows

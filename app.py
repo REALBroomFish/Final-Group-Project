@@ -26,7 +26,7 @@ bootstrap = Bootstrap(app)
 
 @app.route('/map2')
 def heatmapInteract():
-    data_points = 100
+    data_points = 100   
     date_1 = 2000
     date_2 = 2023
     clusters = 'c'
